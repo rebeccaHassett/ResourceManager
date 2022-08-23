@@ -24,7 +24,7 @@ query getAccounts {
 ```
 
  * Run updateAccount mutation in GraphiQL environment
- ```
+ ```graphql
 mutation  {
   updateAccount(selectedUid: "wns", updatedUid: "wns2", gecos: "Ben Smith", uidNumber: 1256, eppns: ["ben@gmail.com"], trainingUptodate: true, lastAccountActivity: "2022-08-27T21:28:09Z") {
     __typename
@@ -57,7 +57,7 @@ record that is updated depends on the selectedUid. An UpdateAccountError is thro
 in the "last_account_activity" field. The mutation validates the datetime format.
 
 * updateAccountActivity mutation for updating "last_account_activity" to current time
-```
+```graphql
 mutation  {
   updateAccountActivity(uid: "wns2") {
     __typename
